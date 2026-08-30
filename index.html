@@ -821,14 +821,18 @@
             align-items: flex-start;
         }
 
-        .about-image {
+        .about-image-wrapper {
             width: 100%;
             max-width: 300px;
             border-radius: var(--radius);
-            border: 1px solid var(--panel-border);
-            box-shadow: var(--shadow);
-            transition: transform 0.3s, border-color 0.3s;
-            object-fit: cover;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--blue), var(--violet), var(--cyan));
+            box-shadow: 0 0 30px rgba(76, 141, 255, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .about-image-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 50px rgba(76, 141, 255, 0.3);
         }
         .about-image:hover {
             transform: scale(1.02);
@@ -1442,7 +1446,9 @@
                 </div>
                 <div class="about-portrait-wrap reveal" style="transition-delay:0.1s">
                     <!-- ABOUT IMAGE -->
-                    <img src="aditya_img.png" alt="Aditya Bahekar" class="about-image" />
+                    <div class="about-image-wrapper">
+                        <img src="aditya_img.png" alt="Aditya Bahekar" class="about-image" />
+                    </div>
                     <div class="fact-list">
                         <div class="fact"><span class="k">Location</span><span class="v">Amravati, Maharashtra, India</span></div>
                         <div class="fact"><span class="k">Currently</span><span class="v">3rd Year B.Tech · CSE</span></div>
